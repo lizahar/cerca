@@ -1,0 +1,397 @@
+/* ==========================================
+   VARIABLES Y ESTILOS GENERALES
+   ========================================== */
+:root {
+  --primary-color: #00d2ff;
+  --secondary-color: #3a7bd5;
+  --whatsapp-color: #25d366;
+  --whatsapp-hover: #1da851;
+  --bg-dark: #0f172a;
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   ANIMACIONES DE FONDO Y EFECTOS
+   ========================================== */
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+  animation: floatBg 10s infinite alternate ease-in-out;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  top: -100px;
+  left: -100px;
+  opacity: 0.3;
+}
+
+.shape-2 {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  bottom: 100px;
+  right: -100px;
+  opacity: 0.2;
+}
+
+@keyframes floatBg {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* ==========================================
+   HEADER / NAVEGACIÓN
+   ========================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.btn-whatsapp-nav {
+  background-color: var(--whatsapp-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-nav:hover {
+  background-color: var(--whatsapp-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.badge {
+  background: rgba(0, 210, 255, 0.1);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin: 20px 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.btn-hero {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
+}
+
+.btn-hero:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 210, 255, 0.5);
+}
+
+/* ==========================================
+   SECCIÓN DE SERVICIOS
+   ========================================== */
+.services-container {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: left;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: 0.5s;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 210, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-card.highlight {
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.service-card ul {
+  list-style: none;
+}
+
+.service-card ul li {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+  font-size: 0.95rem;
+}
+
+.service-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* ==========================================
+   CTA BANNER
+   ========================================== */
+.cta-banner {
+  margin: 60px 8% 100px 8%;
+  background: linear-gradient(135deg, rgba(58, 123, 213, 0.2), rgba(0, 210, 255, 0.2));
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 60px 30px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.cta-banner p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--whatsapp-color);
+  color: white;
+  text-decoration: none;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-cta:hover {
+  background-color: var(--whatsapp-hover);
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================
+   BOTÓN FLOTANTE WHATSAPP (ANIMADO)
+   ========================================== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--whatsapp-color);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: var(--whatsapp-hover);
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  fill: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   ANIMACIONES GENERALES Y RESPONSIVE
+   ========================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .header {
+    padding: 15px 5%;
+  }
+  
+  .btn-whatsapp-nav {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .cta-banner {
+    padding: 40px 20px;
+  }
+}
