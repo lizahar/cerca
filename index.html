@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cerca</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acompañamiento y Gestiones Personales</title>
+  <!-- Fuente Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cerca</h1>
+
+  <!-- Elementos de fondo decorativos para animaciones -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <!-- Encabezado / Navegación -->
+  <header class="header">
+    <div class="logo">TuAsistente<span>.</span></div>
+    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios" target="_blank" class="btn-whatsapp-nav">
+      <i>💬</i> Contactar por WhatsApp
+    </a>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Atención Personalizada y Confiable</span>
+      <h1>Te acompañamos y hacemos tus gestiones por ti</h1>
+      <p>Nos encargamos de tus trámites, transporte de encargos y brindamos el mejor acompañamiento para ti o tus seres queridos. Tu tranquilidad es nuestra prioridad.</p>
+      
+      <a href="https://wa.me/573153412613?text=Hola,%20me%20gustaría%20solicitar%20un%20servicio" target="_blank" class="btn-hero">
+        Solicitar Servicio Ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section class="services-container">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-subtitle">Soluciones prácticas para facilitar tu vida diaria</p>
+
+    <div class="services-grid">
+      
+      <!-- Servicio 1 -->
+      <div class="service-card">
+        <div class="icon">🤝</div>
+        <h3>Compañía y Asistencia</h3>
+        <ul>
+          <li>Acompañamiento a citas médicas</li>
+          <li>Paseos y salidas recreativas</li>
+          <li>Ayuda con compras del hogar</li>
+          <li>Acompañamiento cálido en el hogar</li>
+        </ul>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-card highlight">
+        <div class="icon">📋</div>
+        <h3>Trámites y Diligencias</h3>
+        <ul>
+          <li>Radicación de documentos</li>
+          <li>Pago de servicios públicos</li>
+          <li>Filas en entidades públicas/privadas</li>
+          <li>Gestión de papeleo diverso</li>
+        </ul>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="service-card">
+        <div class="icon">🚚</div>
+        <h3>Transporte y Logística</h3>
+        <ul>
+          <li>Reclamación de medicamentos</li>
+          <li>Entrega de encomiendas personales</li>
+          <li>Retiro y envío de paquetes</li>
+          <li>Mandados express en la ciudad</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Banner de Llamado a la Acción -->
+  <section class="cta-banner">
+    <h2>¿Necesitas ayuda con alguna gestión hoy?</h2>
+    <p>Escríbenos directamente por WhatsApp y agenda tu servicio en pocos minutos.</p>
+    <a href="https://wa.me/1234567890?text=Hola,%20necesito%20asistencia%20con%20un%20trámite" target="_blank" class="btn-cta">
+      Hablar con un Asesor
+    </a>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 TuAsistente. Todos los derechos reservados. Tu aliado de confianza.</p>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp permanente -->
+  <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20por%20un%20servicio" class="whatsapp-float" target="_blank" aria-label="Contacto WhatsApp">
+    <svg viewBox="0 0 32 32" class="whatsapp-icon">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.134-2.133c2.372 1.296 5.055 1.983 7.866 1.983 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.453 0-4.855-0.656-6.96-1.901l-0.5-0.297-5.18 1.359 1.383-5.047-0.328-0.521c-1.371-2.181-2.098-4.708-2.098-7.259 0-7.352 5.981-13.333 13.333-13.333s13.333 5.981 13.333 13.333c0 7.352-5.98 13.333-13.333 13.333zM22.502 19.333c-0.356-0.178-2.106-1.039-2.433-1.158s-0.564-0.178-0.801 0.178c-0.238 0.356-0.92 1.158-1.128 1.396-0.208 0.238-0.416 0.267-0.772 0.089s-1.503-0.554-2.863-1.767c-1.058-0.944-1.773-2.109-1.981-2.465s-0.022-0.549 0.156-0.726c0.16-0.16 0.356-0.416 0.534-0.624s0.238-0.356 0.356-0.594c0.119-0.238 0.059-0.446-0.030-0.624s-0.801-1.931-1.099-2.644c-0.29-0.693-0.584-0.599-0.801-0.61-0.208-0.010-0.446-0.010-0.684-0.010s-0.624 0.089-0.95 0.446c-0.327 0.356-1.247 1.218-1.247 2.97 0 1.752 1.277 3.445 1.455 3.683s2.513 3.838 6.088 5.381c0.85 0.367 1.514 0.586 2.032 0.75 0.854 0.271 1.631 0.233 2.245 0.141 0.685-0.102 2.106-0.861 2.403-1.693s0.297-1.544 0.208-1.693c-0.089-0.148-0.327-0.238-0.684-0.416z"></path>
+    </svg>
+  </a>
+
 </body>
 </html>
